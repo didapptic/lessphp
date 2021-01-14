@@ -61,7 +61,7 @@ class InputTest extends PHPUnit\Framework\TestCase {
         file_put_contents(self::outputNameFor($inFname), $css);
     }
 
-    public static function findInputNames($pattern="*.less") {
+    public static function findInputNames($pattern= "*.less") {
         $files = array();
         foreach (self::$testDirs as $inputDir => $outputDir) {
             $files = array_merge($files, glob(__DIR__ . "/" . $inputDir . "/" . $pattern));
